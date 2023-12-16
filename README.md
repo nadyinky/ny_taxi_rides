@@ -1,13 +1,13 @@
 # GCP data engineering: NYC taxi rides
 
-The goal of this project is to design and implement a data pipeline using modern data engineering tools and technologies to ingest, transform, and serve taxi trip data from 
+Data pipeline using cloud-based tools to ingest, transform, and serve taxi trip data from 
 the New York City [government website](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page#).
 
-### Project overview
+### Pipeline overview
 
 ![workflow](images/workflow.png "Workflow")
 
-The project can be divided into three main stages: **Ingestion**, **Transformation**, and **Serving**.
+#### Key stages:
 
 1. **Ingestion**: leveraging Airflow, we monthly download the Yellow and Green taxi trip data from the NYC government 
   website and ingest it into both the Google BigQuery and the bucket storage that we prepared using Terraform.
@@ -23,12 +23,12 @@ The project can be divided into three main stages: **Ingestion**, **Transformati
 
 ### Technology stack
 
-- Terraform: Infrastructure as Code tool used for interacting with Google cloud
-- Airflow: workflow management platform for orchestrating the data ingestion process
-- Google Cloud Storage (bucket): data lake used for storing raw data
-- BigQuery (BQ): data warehouse used for storing and querying datasets
-- DBT (Data Build Tool): data transformation tool for building a unified `fact_trips` from the Green and Yellow taxi data
-- Looker: BI tool used to create interactive dashboard
+- **Terraform**: Infrastructure as Code tool used for interacting with Google cloud
+- **Airflow**: workflow management platform for orchestrating the data ingestion process
+- **Google Cloud Storage** (bucket): data lake used for storing raw data
+- **BigQuery** (BQ): data warehouse used for storing and querying datasets
+- **DBT** (Data Build Tool): data transformation tool for building a unified `fact_trips` from the Green and Yellow taxi data
+- **Looker**: BI tool used to create interactive dashboard
 
 ### Setup and usage
 
